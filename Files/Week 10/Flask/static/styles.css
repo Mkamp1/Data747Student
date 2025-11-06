@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'Graffiti';
+    src: url("/static/fonts/UrbanJungleDEMO.otf");
+}
+
+/* Graffiti Glow Theme */
+
+body {
+    background: #0c0c0f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header Banner (your image stays!) */
+header {
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Neon Spray Navigation */
+nav {
+    background: rgba(10, 10, 10, 0.85);
+    padding: 12px 0;
+    border-bottom: 2px solid #ff00e6;
+}
+
+nav a {
+    color: #00fff2;
+    margin: 0 20px;
+    font-weight: bold;
+    text-shadow: 0 0 8px #00fff2;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #ff00e6;
+    text-shadow: 0 0 12px #ff00e6;
+}
+
+/* GRAFFITI TITLE */
+h1, h2 {
+    font-family: 'Graffiti', cursive;
+    font-size: 72px;
+    color: #ff00e6;
+    text-shadow: 0 0 12px #ff00e6, 0 0 28px #ff009d, 0 0 40px #ff00e6;
+    letter-spacing: 3px;
+}
+
+/* Glowing Content Box */
+.content-box {
+    background: rgba(15, 15, 20, 0.9);
+    padding: 40px;
+    margin: 50px auto;
+    width: 65%;
+    border-radius: 18px;
+    box-shadow: 0 0 40px rgba(255, 0, 200, 0.35), 0 0 12px rgba(0, 255, 240, 0.25);
+    border: 2px solid rgba(255, 0, 230, 0.5);
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    color: #888;
+    font-size: 12px;
+}
+/* ---- DRIP EFFECT ---- */
+.drip-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* create drips */
+.drip-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 40px;
+    background: #ff00e6;
+    border-radius: 6px;
+    filter: blur(2px);
+    animation: dripFlow 2s infinite ease-in-out;
+}
+
+/* random movement drip animation */
+@keyframes dripFlow {
+    0% { height: 20px; opacity: 1; }
+    50% { height: 45px; opacity: 0.6; }
+    100% { height: 25px; opacity: 1; }
+}
+
+/* optional multiple spray particles */
+.drip-title span {
+    position: relative;
+}
+
+.drip-title span::before,
+.drip-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;     /* wider = thicker paint drip */
+    height: 35px;
+    background: #ff00e6;
+    border-radius: 12px; /* smoother round tip */
+    filter: blur(3px);
+    animation: dripFlow 4.5s infinite ease-in-out; /* slow + smooth */
+}
+
+.drip-title span::before {
+    top: -10px;
+    left: -15px;
+}
+
+.drip-title span::after {
+    top: 10px;
+    right: -15px;
+}
+
+@keyframes dripFlow {
+    0% { height: 18px; opacity: 1; }
+    25% { height: 28px; opacity: 0.95; }
+    50% { height: 55px; opacity: 0.75; }
+    75% { height: 40px; opacity: 0.85; }
+    100% { height: 22px; opacity: 1; }
+}
+
+
+

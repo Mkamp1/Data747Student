@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}DATA 747 Flask App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<header class="hero"></header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/hello">Say Hello</a>
+</nav>
+
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+<footer>
+    <p>© 2025 Michael Kamp — DATA 747 Flask Project</p>
+</footer>
+
+</body>
+</html>
+
